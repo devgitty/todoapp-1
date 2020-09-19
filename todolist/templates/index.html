@@ -10,11 +10,28 @@
 </head>
 
 <body>
+<a href="{% url 'TodoList'%}">Home</a>
+<a> | </a>
+<a href="{% url 'webpage2'%}">Getting Things Done</a>
+<a> | </a>
+<a href="{% url 'webpage2'%}">Situation</a>
+<a> | </a>
+<a href="{% url 'webpage2'%}">Workout</a>
+<center>
+<p></p>
+<a href="{% url 'webpage2'%}">Getting Things Done</a>
+<p></p>
+<a href="{% url 'webpage2'%}">Situation</a>
+</center>
+<br>
+<br>
+<br>
+<br>
 <div django-app="TaskManager">        
 	<div class="container">
             <div class="content">
-            <h1>TodoApp</h1>
-            <p class="tagline">a Django todo app</p>
+            <h1>Getting Things Done</h1>
+            <p class="tagline">a Django app</p>
             <form action="" method="post">
             {% csrf_token %} <!-- csrf token for basic security -->
                 <div class="inputContainer">

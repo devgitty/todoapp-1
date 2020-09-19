@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Things Done</title>
+  {% load static %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<a href="{% url 'TodoList'%}">Home</a>
+<a> | </a>
+<a href="{% url 'webpage2'%}">Getting Things Done</a>
+<!--<a href="{% url 'webpage2'%}">Ein Wochenziel anzeigen</a>-->
+<h1>Getting Things Done</h1>
+<center>
+<p></p>
+<a href="{% url 'webpage2'%}">Alle Wochenziele anzeigen</a>
+<p></p>
+<a href="{% url 'webpage2'%}">Alle Termine anzeigen</a>
+</center>
+</body>
+</html>

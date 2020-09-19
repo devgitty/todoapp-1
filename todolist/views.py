@@ -26,3 +26,12 @@ def index(request): #the index view
 				todo.delete() #deleting todo
 
 	return render(request, "index.html", {"todos": todos, "categories":categories})
+
+#++++++++++++++++++
+#Zusätzlich eingefügt ab hier, d.h. wieder löschen:
+
+def page2(request): #the page2 view
+	return render(request, "page2.html")
+
+#Zusätzlich eingefügt bis hier
+#++++++++++++++++++
