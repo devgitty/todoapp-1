@@ -2,13 +2,14 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render,redirect
-from .models import TodoList, Category
+from .models import TodoList, Category, WeekTarget
 import datetime
 # Create your views here.
 
 def index(request): #the index view
 	todos = TodoList.objects.all() #quering all todos with the object manager
 	categories = Category.objects.all() #getting all categories with object manager
+	weektargets = WeekTarget.objects.all() #getting all week targets with object manager
 	if request.method == "POST": #checking if the request method is a POST
 		if "taskAdd" in request.POST: #checking if there is a request to add a todo
 			title = request.POST["description"] #title
