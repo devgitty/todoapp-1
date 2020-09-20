@@ -27,11 +27,10 @@ def index(request): #the index view
 
 	return render(request, "index.html", {"todos": todos, "categories":categories})
 
-#++++++++++++++++++
-#Zusätzlich eingefügt ab hier, d.h. wieder löschen:
 
 def page2(request): #the page2 view
 	return render(request, "page2.html")
 
-#Zusätzlich eingefügt bis hier
-#++++++++++++++++++
+
+def show_week_targets(request): #the show_week_targets view
+	return render(request, "show_week_targets.html")
