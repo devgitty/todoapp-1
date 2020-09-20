@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=250)),
                 ('content', models.TextField(blank=True)),
-                ('created', models.DateTimeField(default=datetime.datetime(2017, 9, 27, 4, 28, 14, 690000, tzinfo=utc))),
+                ('created', models.DateField(default=b'09 28, 2017')),
                 ('due_date', models.DateField(default=b'09 27, 2017')),
                 ('category', models.ForeignKey(default='general', on_delete=django.db.models.deletion.CASCADE, to='todolist.Category')),
             ],

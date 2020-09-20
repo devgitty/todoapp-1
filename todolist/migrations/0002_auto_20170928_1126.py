@@ -11,15 +11,4 @@ class Migration(migrations.Migration):
         ('todolist', '0001_initial'),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name='todolist',
-            name='created',
-            field=models.DateField(default=b'09 28, 2017'),
-        ),
-        migrations.AlterField(
-            model_name='todolist',
-            name='due_date',
-            field=models.DateField(default=b'09 28, 2017'),
-        ),
-    ]
+
