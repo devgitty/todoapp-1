@@ -29,7 +29,7 @@ class TodoList(models.Model): #Todolist able name that inherits models.Model
 	def __str__(self):
 		return self.title #name to be shown when called
 
-class WeekTarget(models.Model):
+class WeekTargetList(models.Model):
 	show_in_number_of_week_cycles = models.IntegerField(null=True)		#models.IntegerField(null=True)
 	is_during_working_hours = models.IntegerField
 	day_target_show_from_weekday = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))

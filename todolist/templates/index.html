@@ -35,7 +35,7 @@
             <form action="" method="post">
             {% csrf_token %} <!-- csrf token for basic security -->
                 <div class="inputContainer">
-                    <input type="text" id="description" class="taskName" placeholder="SMARTe Fomulierung des Wochenziels?" name="description" required>
+                    <input type="text" id="description" class="taskName" placeholder="Description?" name="description" required>
                     <label for="description">Description</label>
                 </div>
                 <div class="inputContainer half last">
@@ -87,7 +87,7 @@
             <form action="" method="post">
             {% csrf_token %} <!-- csrf token for basic security -->
                 <div class="inputContainer">
-                    <input type="text" id="description" class="taskName" placeholder="What do you need to do?" name="description" required>
+                    <input type="text" id="description" class="taskName" placeholder="SMARTe Fomulierung des Wochenziels?" name="week_target_description" required>
                     <label for="description">Description</label>
                 </div>
                 <div class="inputContainer half last">
