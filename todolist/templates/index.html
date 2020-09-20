@@ -90,23 +90,58 @@
                     <input type="text" id="description" class="taskName" placeholder="SMARTe Fomulierung des Wochenziels?" name="week_target_description" required>
                     <label for="description">Description</label>
                 </div>
-                <div class="inputContainer half last">
-                    <i class="fa fa-caret-down selectArrow"></i>
-                    <select id="category" class="taskCategory" name="category_select">
-                    <option class="disabled" value="">Choose a category</option>
-                    {% for category in categories %}
-                        <option class="" value="{{ category.name }}" name="{{ category.name }}">{{ category.name }}</option>
-                    {% endfor %}
-                    </select>
-                    <label for="category">Category</label>
+                <div class="inputContainer">
+                    <input type="number" id="description" class="taskName" placeholder="Is during Working hours?" name="is_during_working_hours" required>
+                    <label for="description">Is During Working Hours</label>
                 </div>
                 <div class="inputContainer half last right">
-                    <input type="date" id="dueDate" class="taskDate" name="date">
-                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" class="taskDate" name="day_target_show_from_weekday">
+                    <label for="dueDate">Day Target Show From Weekday</label>
                 </div>
+                <div class="inputContainer half last right">
+                    <input type="date" id="dueDate" class="taskDate" name="day_target_show_to_weekday">
+                    <label for="dueDate">Day Target Show To Weekday</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="number" id="description" class="taskName" placeholder="Is during Working hours?" name="show_in_number_of_week_cycles" required>
+                    <label for="description">Show In Number Of Week Cycles</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" id="description" class="taskName" placeholder="Kommentar" name="comment" required>
+                    <label for="description">Comment</label>
+                </div>
+                <div class="inputContainer half last right">
+                    <input type="date" id="dueDate" class="taskDate" name="associated_email_received_datetime">
+                    <label for="dueDate">Associated Email Received Datetime</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" id="description" class="taskName" placeholder="Email Account" name="associated_email_received_account" required>
+                    <label for="description">Associated Email Received Account</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="number" id="description" class="taskName" placeholder="Plan Duration Mins" name="plan_duration_mins" required>
+                    <label for="description">Plan Duration Mins</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="number" id="description" class="taskName" placeholder="Recurrence Period Weeks" name="recurrence_period_weeks" required>
+                    <label for="description">Recurrence Period Weeks</label>
+                </div>
+                <div class="inputContainer half last right">
+                    <input type="date" id="dueDate" class="taskDate" name="due_datetime">
+                    <label for="dueDate">Due Datetime</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" id="description" class="taskName" placeholder="Status Category" name="status_category" required>
+                    <label for="description">Status Category</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" id="description" class="taskName" placeholder="Sorting Category Indistinguishable?" name="week_target_backlog_item_sorting_category_indistinguishable" required>
+                    <label for="description">Sorting Category Indistinguishable</label>
+                </div>
+
                 <div class="row">
-                    <button class="taskAdd" name="taskAdd" type="submit"><i class="fa fa-plus icon"></i>Add week target</button>
-                    <button class="taskDelete" name="taskDelete" formnovalidate="" type="submit" onclick="$('input#sublist').click();"><i class="fa fa-trash-o icon"></i>Delete week target</button>
+                    <button class="taskAdd" name="WeekTargetAdd" type="submit"><i class="fa fa-plus icon"></i>Add week target</button>
+                    <button class="taskDelete" name="WeekTargetDelete" formnovalidate="" type="submit" onclick="$('input#sublist').click();"><i class="fa fa-trash-o icon"></i>Delete week target</button>
                 </div>
             
             
