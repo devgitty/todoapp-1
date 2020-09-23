@@ -148,10 +148,8 @@
             <ul  class="taskList">
             {% for weektarget in weektargets %} <!-- django template lang - for loop -->
                 <li class="taskItem">
-<!--                    <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ weektarget.id }}" value="{{ weektarget.id }}">  -->
-                    <label for="{{ weektarget.id }}"><span class="complete-">{{ weektarget.title }}</span></label>
-<!--                    <span class="category-{{ todo.category }}">{{ todo.category }}</span>
-                    <strong class="taskDate"><i class="fa fa-calendar"></i>{{ todo.created }} - {{ todo.due_date }}</strong>  -->
+                    <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ weektarget.id }}" value="{{ weektarget.id }}"> 
+                    <label for="{{ weektarget.id }}"><span class="complete-">{{ weektarget.description }}</span></label>
                 </li>
             {% endfor %}
             

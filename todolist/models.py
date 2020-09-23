@@ -5,7 +5,7 @@ from django.db import models
 from django.utils import timezone
 from datetime import timedelta
 
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+#from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 
 # Create your models here.
@@ -47,8 +47,8 @@ class WeekTargetList(models.Model):
 #	due_datetime = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	status_category = models.CharField(max_length=250)
 
-#	class Meta:
-#		ordering = ["-is_during_working_hours"]
+	class Meta:
+		ordering = ["-description"]
 
 	def __str__(self):
 		return self.description #name to be shown when called
