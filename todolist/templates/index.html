@@ -144,7 +144,6 @@
                     <button class="taskDelete" name="WeekTargetDelete" formnovalidate="" type="submit" onclick="$('input#sublist').click();"><i class="fa fa-trash-o icon"></i>Delete week target</button>
                 </div>
             
-            
             <ul  class="taskList">
             {% for weektarget in weektargets %} <!-- django template lang - for loop -->
                 <li class="taskItem">
@@ -152,7 +151,6 @@
                     <label for="{{ weektarget.id }}"><span class="complete-">{{ weektarget.description }}</span></label>
                 </li>
             {% endfor %}
-            
             
             </ul><!-- taskList -->
             </form>

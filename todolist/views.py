@@ -42,7 +42,7 @@ def index(request): #the index view
 				todo.delete() #deleting todo
 	
 
-	return render(request, "index.html", {"todos": todos, "categories":categories})
+	return render(request, "index.html", {"todos": todos, "categories":categories, "weektargets": weektargets})
 
 
 def page2(request): #the page2 view
