@@ -28,10 +28,11 @@ def index(request): #the index view
 
 		if "WeekTargetAdd" in request.POST: #checking if there is a request to add a todo
 			description = request.POST["week_target_description"]
+			comment = request.POST["comment"]
 #			date = str(request.POST["date"]) #date
 #			category = request.POST["category_select"] #category
 #			content = title + " -- " + date + " " + category #content
-			WeekTarget = WeekTargetList(description=description)
+			WeekTarget = WeekTargetList(description=description, comment=comment)
 			WeekTarget.save() #saving the weektarget 
 			return redirect("/") #reloading the page
 		
