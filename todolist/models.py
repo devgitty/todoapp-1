@@ -39,7 +39,7 @@ class WeekTargetList(models.Model):
 #	day_target_show_to_weekday = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	week_target_backlog_item_sorting_category_indistinguishable = models.CharField(max_length=250)
 	description = models.TextField(blank=False)
-#	comment = models.TextField(blank=False)
+	comment = models.TextField(blank=False)
 #	associated_email_received_datetime = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	associated_email_received_account = models.CharField(max_length=250)
 #	plan_duration_mins = models.IntegerField(null=True)

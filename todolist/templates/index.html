@@ -149,9 +149,13 @@
                 <li class="taskItem">
                     <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ weektarget.id }}" value="{{ weektarget.id }}"> 
                     <label for="{{ weektarget.id }}"><span class="complete-">{{ weektarget.description }}</span></label>
-                </li>
+                    <span class="category-{{ weektarget.comment }}">{{ weektarget.comment }}</span>
             {% endfor %}
             
+
+
+
+
             </ul><!-- taskList -->
             </form>
             </div><!-- content -->
