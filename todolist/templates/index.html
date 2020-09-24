@@ -150,6 +150,7 @@
                     <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ weektarget.id }}" value="{{ weektarget.id }}"> 
                     <label for="{{ weektarget.id }}"><span class="complete-">{{ weektarget.description }}</span></label>
                     <span class="category-{{ weektarget.comment }}">{{ weektarget.comment }}</span>
+                    <strong class="taskDate"><i class="fa fa-calendar"></i>{{ weektarget.due_datetime }}</strong>
             {% endfor %}
             
 

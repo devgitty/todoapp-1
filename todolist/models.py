@@ -44,7 +44,7 @@ class WeekTargetList(models.Model):
 #	associated_email_received_account = models.CharField(max_length=250)
 #	plan_duration_mins = models.IntegerField(null=True)
 #	recurrence_period_weeks = models.IntegerField(null=True)
-#	due_datetime = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
+	due_datetime = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	status_category = models.CharField(max_length=250)
 
 	class Meta:
