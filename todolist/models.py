@@ -34,8 +34,8 @@ class TodoList(models.Model): #Todolist able name that inherits models.Model
 
 class WeekTargetList(models.Model):
 	show_in_number_of_week_cycles = models.IntegerField(null=True)		#models.IntegerField(null=True)
-#	is_during_working_hours = models.IntegerField
-#	day_target_show_from_weekday = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
+	is_during_working_hours = models.IntegerField
+	day_target_show_from_weekday = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	day_target_show_to_weekday = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 #	week_target_backlog_item_sorting_category_indistinguishable = models.CharField(max_length=250)
 	description = models.TextField(blank=False)

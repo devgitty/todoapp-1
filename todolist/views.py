@@ -31,9 +31,11 @@ def index(request): #the index view
 			comment = request.POST["comment"]
 			due_datetime = str(request.POST["due_datetime"])
 			show_in_number_of_week_cycles = str(request.POST["show_in_number_of_week_cycles"])
+			is_during_working_hours = str(request.POST["is_during_working_hours"])
+			day_target_show_from_weekday = str(request.POST["day_target_show_from_weekday"])
 #			category = request.POST["category_select"] #category
 #			content = title + " -- " + date + " " + category #content
-			WeekTarget = WeekTargetList(description=description, comment=comment, due_datetime=due_datetime, show_in_number_of_week_cycles=show_in_number_of_week_cycles)
+			WeekTarget = WeekTargetList(description=description, comment=comment, due_datetime=due_datetime, show_in_number_of_week_cycles=show_in_number_of_week_cycles, is_during_working_hours=is_during_working_hours, day_target_show_from_weekday=day_target_show_from_weekday)
 			WeekTarget.save() #saving the weektarget 
 			return redirect("/") #reloading the page
 		
