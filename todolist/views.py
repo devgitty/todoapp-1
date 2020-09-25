@@ -33,9 +33,17 @@ def index(request): #the index view
 			show_in_number_of_week_cycles = str(request.POST["show_in_number_of_week_cycles"])
 			is_during_working_hours = str(request.POST["is_during_working_hours"])
 			day_target_show_from_weekday = str(request.POST["day_target_show_from_weekday"])
+			day_target_show_to_weekday = str(request.POST["day_target_show_to_weekday"])
+			associated_email_received_datetime = str(request.POST["associated_email_received_datetime"])
+			associated_email_received_account = str(request.POST["associated_email_received_account"])
+			plan_duration_mins = str(request.POST["plan_duration_mins"])
+			recurrence_period_weeks = str(request.POST["recurrence_period_weeks"])
+			status_category = str(request.POST["status_category"])
+			week_target_backlog_item_sorting_category_indistinguishable = str(request.POST["week_target_backlog_item_sorting_category_indistinguishable"])
+
 #			category = request.POST["category_select"] #category
 #			content = title + " -- " + date + " " + category #content
-			WeekTarget = WeekTargetList(description=description, comment=comment, due_datetime=due_datetime, show_in_number_of_week_cycles=show_in_number_of_week_cycles, is_during_working_hours=is_during_working_hours, day_target_show_from_weekday=day_target_show_from_weekday)
+			WeekTarget = WeekTargetList(description=description, comment=comment, due_datetime=due_datetime, show_in_number_of_week_cycles=show_in_number_of_week_cycles, is_during_working_hours=is_during_working_hours, day_target_show_from_weekday=day_target_show_from_weekday, day_target_show_to_weekday=day_target_show_to_weekday, associated_email_received_datetime=associated_email_received_datetime, associated_email_received_account=associated_email_received_account, plan_duration_mins=plan_duration_mins, recurrence_period_weeks=recurrence_period_weeks, status_category=status_category, week_target_backlog_item_sorting_category_indistinguishable=week_target_backlog_item_sorting_category_indistinguishable)
 			WeekTarget.save() #saving the weektarget 
 			return redirect("/") #reloading the page
 		
