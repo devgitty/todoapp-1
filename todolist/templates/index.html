@@ -40,19 +40,19 @@
                     <label for="description">Description</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" id="comment" class="taskName" placeholder="Kommentar" name="comment" required>
+                    <input type="text" id="comment" class="taskName" placeholder="Kommentar" name="comment">
                     <label for="comment">Comment</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="date" id="due_datetime" class="taskDate" name="due_datetime">
+                    <input type="date" id="due_datetime" class="taskDate" name="due_datetime", value=timezone.now().strftime("%Y-%m-%d")>
                     <label for="due_datetime">Due Datetime</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="number" id="show_in_number_of_week_cycles" class="taskName" placeholder="Show in number of week cycles?" name="show_in_number_of_week_cycles" required>
+                    <input type="number" id="show_in_number_of_week_cycles" class="taskName" placeholder="Show in number of week cycles?" name="show_in_number_of_week_cycles">
                     <label for="show_in_number_of_week_cycles">Show In Number Of Week Cycles</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="number" id="is_during_working_hours" class="taskName" placeholder="Is during Working hours?" name="is_during_working_hours" required>
+                    <input type="number" id="is_during_working_hours" class="taskName" placeholder="Is during Working hours?" name="is_during_working_hours">
                     <label for="description">Is During Working Hours</label>
                 </div>
                 <div class="inputContainer half first right">
@@ -72,25 +72,25 @@
                 <br>
                 <br>
                 <div class="inputContainer">
-                    <input type="text" id="associated_email_received_account" class="taskName" placeholder="Email Account" name="associated_email_received_account" required>
+                    <input type="text" id="associated_email_received_account" class="taskName" placeholder="Email Account" name="associated_email_received_account">
                     <label for="associated_email_received_account">Associated Email Received Account</label>
                 </div>
                 <br>
                 <div class="inputContainer">
-                    <input type="number" id="plan_duration_mins" class="taskName" placeholder="Plan Duration Mins" name="plan_duration_mins" required>
+                    <input type="number" id="plan_duration_mins" class="taskName" placeholder="Plan Duration Mins" name="plan_duration_mins">
                     <label for="plan_duration_mins">Plan Duration Mins</label>
                 </div>
                 <br>
                 <div class="inputContainer">
-                    <input type="number" id="recurrence_period_weeks" class="taskName" placeholder="Recurrence Period Weeks" name="recurrence_period_weeks" required>
+                    <input type="number" id="recurrence_period_weeks" class="taskName" placeholder="Recurrence Period Weeks" name="recurrence_period_weeks">
                     <label for="recurrence_period_weeks">Recurrence Period Weeks</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" id="status_category" class="taskName" placeholder="Status Category" name="status_category" required>
+                    <input type="text" id="status_category" class="taskName" placeholder="Status Category" name="status_category">
                     <label for="status_category">Status Category</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" id="description" class="taskName" placeholder="Sorting Category Indistinguishable?" name="week_target_backlog_item_sorting_category_indistinguishable" required>
+                    <input type="text" id="description" class="taskName" placeholder="Sorting Category Indistinguishable?" name="week_target_backlog_item_sorting_category_indistinguishable">
                     <label for="description">Sorting Category Indistinguishable</label>
                 </div>
                 <div class="row">
