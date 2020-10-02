@@ -6,6 +6,8 @@ from .models import TodoList, Category, WeekTargetList
 import datetime
 # Create your views here.
 
+from .forms import WeekTargetForm
+
 def index(request): #the index view
 	todos = TodoList.objects.all() #quering all todos with the object manager
 	categories = Category.objects.all() #getting all categories with object manager
@@ -54,9 +56,12 @@ def index(request): #the index view
 
 	return render(request, "index.html", {"todos": todos, "categories":categories, "weektargets": weektargets})
 
+def page2(request):
+	form = WeekTargetForm()
+	return render(request, 'page2.html', {'form':form})
 
-def page2(request): #the page2 view
-	return render(request, "page2.html")
+#def page2(request): #the page2 view
+#	return render(request, "page2.html")
 
 
 def show_week_targets(request): #the show_week_targets view

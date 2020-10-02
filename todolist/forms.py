@@ -4,8 +4,18 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-class WeekTargetForm(forms.Form):
+from .models import WeekTargetList
+
+class WeekTargetForm(forms.ModelForm):
+    class Meta:
+        model = WeekTargetList
+        fields =[
+            'description',
+            'comment',
+        ]
     # hier Null-Werte für Datum (z.B. Due_DateTime) berücksichtigen. Problem mit Models.py: None wird automatisch zu String "None" umgewandelt was in init.py (C:\venv\Lib\site-packages\django\db\models\fields\__init__.py) zu einem Fehler führt
+
+
 
 
 """ Beispiel:

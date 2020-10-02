@@ -20,5 +20,15 @@
 <p></p>
 <a href="{% url 'webpage2'%}">Alle Termine anzeigen</a>
 </center>
+
+<!--Forms test-->
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="taskName">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+
 </body>
 </html>

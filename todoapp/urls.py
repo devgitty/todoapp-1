@@ -23,7 +23,8 @@ from django.urls import path
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name="TodoList"),
-    url('page2/', page2,name="webpage2"),
+#    url('page2/', page2,name="webpage2"),
     url('show_week_targets/', show_week_targets,name="webpage_show_week_targets"),
+    url('page2/', page2, name="webpage2"),
 #    path('page2',index.webpage2,name="webpage2"),
 ]
