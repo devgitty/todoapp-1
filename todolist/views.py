@@ -66,6 +66,17 @@ def page2(request):
 		form = WeekTargetForm()
 	return render(request, 'page2.html', {'form':form})
 
+#Edit WeekTarget:
+def page3(request):
+	if request.method == "POST":
+		form = WeekTargetForm(request.POST)
+		WeekTarget = form.save(commit=False)
+		WeekTarget.save()
+		return redirect("/") #reloading the page
+	else:
+		form = WeekTargetForm()
+	return render(request, 'page3.html', {'form':form})
+
 #def page2(request): #the page2 view
 #	return render(request, "page2.html")
 

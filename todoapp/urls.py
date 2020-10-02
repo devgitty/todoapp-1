@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from todolist.views import index, page2, show_week_targets
+from todolist.views import index, page2, page3, show_week_targets
 from django.urls import path
 
 #from . import views #index, page2
@@ -26,5 +26,6 @@ urlpatterns = [
 #    url('page2/', page2,name="webpage2"),
     url('show_week_targets/', show_week_targets,name="webpage_show_week_targets"),
     url('page2/', page2, name="webpage2"),
+    url('page3/', page3, name="webpage3"),
 #    path('page2',index.webpage2,name="webpage2"),
 ]
