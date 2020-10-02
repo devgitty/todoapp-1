@@ -27,5 +27,11 @@ urlpatterns = [
     url('show_week_targets/', show_week_targets,name="webpage_show_week_targets"),
     url('page2/', page2, name="webpage2"),
     url('page3/', page3, name="webpage3"),
+#    url('page4/', page4, name="webpage4"),
 #    path('page2',index.webpage2,name="webpage2"),
 ]
+
+#    path('', views.post_list, name='post_list'),     
+#    path('post/new/', views.post_new, name='post_new'), 
+#    path('post/<int:pk>/', views.post_detail, name='post_detail'),     
+#    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),

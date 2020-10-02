@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import TodoList, Category, WeekTargetList
 import datetime
 # Create your views here.
@@ -56,7 +56,9 @@ def index(request): #the index view
 
 	return render(request, "index.html", {"todos": todos, "categories":categories, "weektargets": weektargets})
 
+#Add WeekTarget:
 def page2(request):
+	weektargets = WeekTargetList.objects.all() #getting all week targets with object manager
 	if request.method == "POST":
 		form = WeekTargetForm(request.POST)
 		WeekTarget = form.save(commit=False)
@@ -66,16 +68,22 @@ def page2(request):
 		form = WeekTargetForm()
 	return render(request, 'page2.html', {'form':form})
 
+#Detail WeekTarget:
+def page3(request, pk=None):
+	WeekTarget = get_object_or_404(WeekTargetList.objects.all(), pk=3)
+	return render(request, 'page3.html', {'WeekTarget':WeekTarget})
+
 #Edit WeekTarget:
-def page3(request):
-	if request.method == "POST":
-		form = WeekTargetForm(request.POST)
-		WeekTarget = form.save(commit=False)
-		WeekTarget.save()
-		return redirect("/") #reloading the page
-	else:
-		form = WeekTargetForm()
-	return render(request, 'page3.html', {'form':form})
+# def page4(request, pk):
+# 	weektarget = get_object_or_404(WeekTargetList, pk=pk)
+# 	if request.method == "POST":
+# 		form = WeekTargetForm(request.POST, instance=WeekTarget)
+# 		WeekTarget = form.save(commit=False)
+# 		WeekTarget.save()
+# 		return redirect('page3', pk=WeekTarget.pk) #reloading the page
+# 	else:
+# 		form = WeekTargetForm(instance=WeekTarget)
+# 	return render(request, 'page4.html', {'form':form})
 
 #def page2(request): #the page2 view
 #	return render(request, "page2.html")

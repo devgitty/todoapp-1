@@ -14,16 +14,7 @@
 <!--HIER WEITER:-->
 <!--https://tutorial.djangogirls.org/de/django_forms/#-->
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-        <a class="btn btn-default" href="{% url 'webpage3' %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+    {{ WeekTarget.description }}
 {% endblock %}
 
 </body>
