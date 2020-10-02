@@ -57,7 +57,14 @@ def index(request): #the index view
 	return render(request, "index.html", {"todos": todos, "categories":categories, "weektargets": weektargets})
 
 def page2(request):
-	form = WeekTargetForm()
+	if request.method == "POST":
+		form = WeekTargetForm(request.POST)
+		WeekTarget = form.save(commit=False)
+#		WeekTarget = WeekTargetList(description=description, comment=comment, due_datetime=due_datetime, show_in_number_of_week_cycles=show_in_number_of_week_cycles, is_during_working_hours=is_during_working_hours, day_target_show_from_weekday=day_target_show_from_weekday, day_target_show_to_weekday=day_target_show_to_weekday, associated_email_received_datetime=associated_email_received_datetime, associated_email_received_account=associated_email_received_account, plan_duration_mins=plan_duration_mins, recurrence_period_weeks=recurrence_period_weeks, status_category=status_category, week_target_backlog_item_sorting_category_indistinguishable=week_target_backlog_item_sorting_category_indistinguishable)
+		WeekTarget.save()
+		return redirect("/") #reloading the page
+	else:
+		form = WeekTargetForm()
 	return render(request, 'page2.html', {'form':form})
 
 #def page2(request): #the page2 view
