@@ -10,8 +10,19 @@ class WeekTargetForm(forms.ModelForm):
     class Meta:
         model = WeekTargetList
         fields =[
+            'show_in_number_of_week_cycles',
+            'is_during_working_hours',
+            # 'day_target_show_from_weekday',
+            # 'day_target_show_to_weekday',
+            # 'week_target_backlog_item_sorting_category_indistinguishable',
             'description',
             'comment',
+            # 'associated_email_received_datetime',
+            # 'associated_email_received_account',
+            'plan_duration_mins',
+            'recurrence_period_weeks',
+            # 'due_datetime',
+            # 'status_category',
         ]
     # hier Null-Werte für Datum (z.B. Due_DateTime) berücksichtigen. Problem mit Models.py: None wird automatisch zu String "None" umgewandelt was in init.py (C:\venv\Lib\site-packages\django\db\models\fields\__init__.py) zu einem Fehler führt
 
