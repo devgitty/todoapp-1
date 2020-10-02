@@ -14,7 +14,9 @@
 <!--HIER WEITER:-->
 <!--https://tutorial.djangogirls.org/de/django_forms/#-->
 {% block content %}
-    {{ WeekTarget.description }}
+    {% if WeekTarget.pk %}
+        {{ WeekTarget.description }}
+    {% endif %}
 {% endblock %}
 
 </body>

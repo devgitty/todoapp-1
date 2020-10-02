@@ -70,7 +70,7 @@ def page2(request):
 
 #Detail WeekTarget:
 def page3(request, pk=None):
-	WeekTarget = get_object_or_404(WeekTargetList.objects.all(), pk=3)
+	WeekTarget = get_object_or_404(WeekTargetList.objects.all(), pk=7)
 	return render(request, 'page3.html', {'WeekTarget':WeekTarget})
 
 #Edit WeekTarget:
