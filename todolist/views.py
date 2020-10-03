@@ -56,7 +56,17 @@ def index(request): #the index view
 
 	return render(request, "index.html", {"todos": todos, "categories":categories, "weektargets": weektargets})
 
-#Add WeekTarget:
+
+
+from django.views import generic
+
+class WeekTargetListView(generic.ListView):
+    """Generic class-based view for a list of books."""
+    model = WeekTargetList
+    paginate_by = 10
+
+
+#New WeekTarget:
 def page2(request):
 	weektargets = WeekTargetList.objects.all() #getting all week targets with object manager
 	if request.method == "POST":
@@ -70,7 +80,7 @@ def page2(request):
 
 #Detail WeekTarget:
 def page3(request, pk=None):
-	WeekTarget = get_object_or_404(WeekTargetList.objects.all(), pk=7)
+	WeekTarget = get_object_or_404(WeekTargetList, pk=6)
 	return render(request, 'page3.html', {'WeekTarget':WeekTarget})
 
 #Edit WeekTarget:
@@ -90,4 +100,5 @@ def page3(request, pk=None):
 
 
 def show_week_targets(request): #the show_week_targets view
-	return render(request, "show_week_targets.html")
+	weektargets = WeekTargetList.objects.all() #getting all week targets with object manager
+	return render(request, "show_week_targets.html", {"weektargets": weektargets})

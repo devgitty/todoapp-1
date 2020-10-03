@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from todolist.views import index, page2, page3, show_week_targets
 from django.urls import path
+from todolist import views
 
 #from . import views #index, page2
 
@@ -25,10 +26,10 @@ urlpatterns = [
     url(r'^$', index, name="TodoList"),
 #    url('page2/', page2,name="webpage2"),
     url('show_week_targets/', show_week_targets,name="webpage_show_week_targets"),
-    url('page2/', page2, name="webpage2"),
-    url('page3/', page3, name="webpage3"),
-#    url('page4/', page4, name="webpage4"),
-#    path('page2',index.webpage2,name="webpage2"),
+    url('page2/', page2, name="webpage2"),      #New WeekTarget
+#    url('page3/<int:pk>', views.WeekTargetList.as_view(), name="webpage3"),      #Detail WeekTarget
+#    url('page4/', page4, name="webpage4"),     #Edit WeekTarget
+    path('page3/<int:pk>', views.WeekTargetListView.as_view(), name="webpage3"),
 ]
 
 #    path('', views.post_list, name='post_list'),     

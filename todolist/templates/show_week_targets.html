@@ -16,9 +16,16 @@
 <h1>Wochenziele anzeigen</h1>
 <center>
 <p></p>
-<p>Week target 1<\p>
-<p>Week target 2<\p>
-<p>Week target 3<\p>
+
+    <h1>WeekTarget List</h1>
+
+      {% for weektarget in weektargets %}
+      <li class="taskItem">
+        <a href="{{ weektarget.get_absolute_url }}">{{ weektarget.description }}</a> ({{ weektarget.comment }})
+      </li>
+      {% endfor %}
+
+
 </center>
 </body>
 </html>
