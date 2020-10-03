@@ -61,9 +61,13 @@ def index(request): #the index view
 from django.views import generic
 
 class WeekTargetListView(generic.ListView):
-    """Generic class-based view for a list of books."""
-    model = WeekTargetList
-    paginate_by = 10
+	"""Generic class-based view for a list of books."""
+	model = WeekTargetList
+	paginate_by = 10
+
+class WeekTargetDetailView(generic.DetailView):
+	"""Generic class-based view for a list of books."""
+	model = WeekTargetList
 
 
 #New WeekTarget:
@@ -79,8 +83,8 @@ def page2(request):
 	return render(request, 'page2.html', {'form':form})
 
 #Detail WeekTarget:
-def page3(request, pk=None):
-	WeekTarget = get_object_or_404(WeekTargetList, pk=6)
+def page3(request, pk):
+	WeekTarget = get_object_or_404(WeekTargetList, pk)
 	return render(request, 'page3.html', {'WeekTarget':WeekTarget})
 
 #Edit WeekTarget:

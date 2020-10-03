@@ -29,7 +29,7 @@ urlpatterns = [
     url('page2/', page2, name="webpage2"),      #New WeekTarget
 #    url('page3/<int:pk>', views.WeekTargetList.as_view(), name="webpage3"),      #Detail WeekTarget
 #    url('page4/', page4, name="webpage4"),     #Edit WeekTarget
-    path('page3/<int:pk>', views.WeekTargetListView.as_view(), name="webpage3"),
+    path('page3/<int:pk>', views.WeekTargetDetailView.as_view(), name="webpage3"),
 ]
 
 #    path('', views.post_list, name='post_list'),     

@@ -47,8 +47,8 @@ class WeekTargetList(models.Model):
 	due_datetime = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))
 	status_category = models.CharField(blank=True, max_length=250)
 
-#    def get_absolute_url(self):
-#        return reverse('webpage3', args=[str(self.id)])
+	def get_absolute_url(self):
+		return reverse('webpage3', args=[str(self.id)])
 
-#	def __str__(self):
-#		return self.description #name to be shown when called
+	def __str__(self):
+		return self.description #name to be shown when called
